@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update User</title>
+</head>
+<body>
+    <h1>Update User</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    <a href="/update/{{ user.id }}">Update</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <hr>
+
+    <form action="/update" method="POST">
+        <input type="hidden" name="id" value="{{ user.id }}">
+
+        <label for="username">Username:</label>
+        <input type="text" name="username" value="{{ user.username }}">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" value="{{ user.email }}">
+
+        <button type="submit">Update</button>
+    </form>
+
+</body>
+</html>

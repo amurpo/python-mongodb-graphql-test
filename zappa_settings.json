@@ -1,0 +1,17 @@
+{
+    "dev": {
+        "app_function": "app.app", 
+        "aws_region": "us-east-1",
+        "profile_name": "default",
+        "project_name": "my-flask-app",
+        "runtime": "python3.11",
+        "s3_bucket": "zappa-3a1vmtucc" ,
+        "exclude": [
+            ".git",
+            ".gitignore",
+            "myenv",
+            "__pycache__"
+        ],
+        "keep_warm": false
+    }
+}

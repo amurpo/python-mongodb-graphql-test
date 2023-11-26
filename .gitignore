@@ -1,0 +1,12 @@
+# Bytecode
+__pycache__/
+
+# Bundles
+*.egg
+*.egg-info
+dist
+build
+*.log
+.pytest_cache
+venv/
+.env
